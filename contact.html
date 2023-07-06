@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Safeer mon ep | Contact</title>
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <section class="w3l-banner-main w3l-inner-page-main">
+    <div class="breadcrumb-infhny">
+      <header id="site-header" class="header-top">
+        <nav class="navbar navbar-expand-lg shift " id="header">
+          <a class="navbar-brand" href="index.html">SAFEER MON EP<span class="dot-1">.</span>
+          </a>
+          <button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon fa fa-bars"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#site-header">Home <span class="sr-only">(current)</span></a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link effect-3" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link effect-3" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link effect-3" href="services.html">Services</a>
+              </li>
+             <li class="nav-item active">
+                <a class="nav-link effect-3" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+      </header>
+
+    </div>
+    <nav id="breadcrumbs" class="breadcrumbs">
+      <div class="page-wrapper">
+        <a href="#">Home</a> » <span class="breadcrumb_last" aria-current="page">Contact</span></div>
+    </nav>
+  </section>
+
+  <!-- /contact-form -->
+  <section class="w3l-contact-main">
+    <div class="contact-infhny py-5">
+      <div class="container py-lg-3">
+        <div class="top-map">
+          <div class="map-content-9">
+            <form id="submit-form" action="" method="post">
+              <div class="form-top1">
+                <h3 class="hny-title text-center mb-0">CONTACT</h3>
+                <p class="mb-lg-5 mb-4 text-center">Interested in working together? Please let me know.</p>
+                <div class="form-top">
+
+                  <div class="form-top-left">
+
+                    <input type="text" name="Name" id="w3lName" placeholder="Name" required="">
+                    <input type="number" name="Phone" placeholder="Your phone number" required="">
+                    <input type="email" name="Sender" id="w3lSender" placeholder="Email*" required="">
+                    <input type="text" name="Subject" id="w3lName" placeholder="Subject" required="">
+                  </div>
+                  <div class="form-top-righ">
+                    <textarea name="Message" id="w3lMessage" placeholder="Message*" required=""></textarea>
+                  </div>
+                </div>
+                <div class="text-lg-right text-center">
+                  <button type="submit">Submit Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- //contact-form -->
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxJSrKfsNJ0fyYgIpMOt8byseajIDXDjmyaVCG5gw8e97TsB9ids95dfHunBBQsTsSKqw/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                // window.location.reload()
+                window.location.href="index.html"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+</body>
+
+</html>
